@@ -1,0 +1,18 @@
+body {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    font-family: 'Hammersmith One', sans-serif;
+    /* font-family: 'Voltaire', sans-serif; */
+}
+
+div.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.okay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
