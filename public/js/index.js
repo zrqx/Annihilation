@@ -1,5 +1,18 @@
 // ## No Change when Cookies aren't set 
 
+// Set Stats and Display
+async function setStats() {
+    let daysCount = document.querySelector('.daysCount')
+    let invitesCount = document.querySelector('.invitesCount')
+
+    let response = await fetch(`https://zrqx.in/stats`)
+
+    invitesCount.innerHTML =  `${await response.json()} Invitations Sent`
+    daysCount.innerHTML = `${21 - new Date().getDate()} Days to Go`
+}
+
+setStats()
+
 // ### 1. SUBSEQUENT USER - START
 
 // Select the Element

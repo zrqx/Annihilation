@@ -100,10 +100,10 @@ if (document.cookie != ''){
     let inviteeList = document.getElementById('inviteeList')
 
     if (getCookie('InviteeOneName') != undefined){
-        inviteeList.innerHTML += `<div>1. ${getCookie("InviteeOneName")}'s Invite Code is ${getCookie("InviteeOneUniquId")}</div>`
+        inviteeList.innerHTML += `<div class="diff-text">1. ${getCookie("InviteeOneName")}'s Invite Code is <span class='inviteHighlight'>${getCookie("InviteeOneUniquId")}</span> </div>`
     }
     if (getCookie('InviteeTwoName') != undefined){
-        inviteeList.innerHTML += `<div>2. ${getCookie("InviteeTwoName")}'s Invite Code is ${getCookie("InviteeTwoUniquId")}</div>`
+        inviteeList.innerHTML += `<div class="diff-text">2. ${getCookie("InviteeTwoName")}'s Invite Code is <span class='inviteHighlight'>${getCookie("InviteeTwoUniquId")}</span></div>`
     }
 
 } else {

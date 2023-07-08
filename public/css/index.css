@@ -5,7 +5,7 @@ body {
 }
 
 section.main {
-    height: 100vh;
+    height: 80vh;
     /* background-color: aquamarine; */
     margin: auto;
     display: flex;
