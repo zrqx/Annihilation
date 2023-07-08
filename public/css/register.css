@@ -11,6 +11,10 @@ div.main {
     align-items: center;
 }
 
+#errorMessage {
+    color: red;
+}
+
 .okay {
     display: flex;
     justify-content: center;
