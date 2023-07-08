@@ -2,7 +2,6 @@ body {
     padding-top: 2%;
     padding-bottom: 5%;
     font-family: 'Hammersmith One', sans-serif;
-    /* font-family: 'Voltaire', sans-serif; */
 }
 
 section.main {
@@ -31,4 +30,18 @@ section.faq {
 .main-header {
     font-size: 3em;
 
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    color: #4d4d4d;
+}
+
+.black {
+    color: #212529;
+}
+
+.navbar-toggler {
+    font-size: .4rem;
+    border: none;
 }

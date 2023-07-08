@@ -18,7 +18,7 @@ form.addEventListener("submit", async function(e){
     if (inviteCode.includes('-')){
         try {
             // Perform an API Request and Get the Details
-            let response = await fetch(`http://139.59.36.141/users/${inviteCode}`)
+            let response = await fetch(`https://zrqx.in/users/${inviteCode}`)
             let userdata = await response.json()
 
             // If the Invite is Valid, Load Cookies and Redirect to 'invite.html'
@@ -45,6 +45,9 @@ form.addEventListener("submit", async function(e){
         // If Invite Code is Structurally Invalid, Display Error Message
         let errorMessage = document.getElementById('errorMessage')
         errorMessage.innerHTML = 'Invalid Invite Code Format. Correct Format: dazzling-shallow-rainbow'
+        setTimeout(() => {
+            errorMessage.innerHTML = ''
+        }, 2000)
     }
 
 })

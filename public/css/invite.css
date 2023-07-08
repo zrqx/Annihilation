@@ -17,3 +17,8 @@ section.main {
 .inviterName {
     color: #0a9da4;
 }
+
+.navbar-toggler {
+    font-size: .4rem;
+    border: none;
+}

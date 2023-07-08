@@ -5,7 +5,7 @@ let form = document.querySelector('#genesisRegisterForm')
 
 // API Request for User Registration with 'Genesis' defaults
 async function registerUser(name){
-    const response = await fetch('http://139.59.36.141/users', {
+    const response = await fetch('https://zrqx.in/users', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
