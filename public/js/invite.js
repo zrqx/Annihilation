@@ -21,6 +21,21 @@ function getCookie(cname){
 
 }
 
+// API Request to Get User Data
+async function handleUserInvitations(inviteCode){
+    let response = await fetch(`https://zrqx.in/users/${inviteCode}`)
+    let userdata = await response.json()
+
+    if (userdata.invitations.length != 0){
+        let invitesArray = userdata.invitations
+
+        invitesArray.forEach(inviteeUniqueId => {
+            console.log(inviteeUniqueId)
+        });
+    }
+}
+
+
 // API Request for User Registration with 'Genesis' defaults
 async function registerUser(inviteeName, inviterName, inviterUniqueId){
     const response = await fetch('https://zrqx.in/users', {
@@ -56,13 +71,19 @@ if (document.cookie != ''){
 
     // Change HTML Tag Text
     let nameField = document.querySelector('.name')
+    let uniqueIdField = document.querySelector('.inviteeUniquId')
     let inviterNameField = document.querySelector('.inviterName')
     let balanceField = document.querySelector('.balance')
 
     nameField.textContent = name
+    uniqueIdField.textContent = uniqueId
     inviterNameField.textContent = inviterName
     balanceField.textContent = balance
 
+    // Get Invitations info and Set Cookies, If inviteeOneName isn't set and balance is not equal to 2
+    if (balance != 2  && (getCookie('inviteeOneName') == '' || undefined)){
+        handleUserInvitations(uniqueId)
+    }
 
     // Handle "Invite Friends" form Submission
     let inviteForm = document.querySelector('#inviteForm')
@@ -71,7 +92,6 @@ if (document.cookie != ''){
         let inviteeName = document.getElementById('inviteeName').value
         if (balance != 0){
             let userdata = await registerUser(inviteeName, name, uniqueId)
-            // console.log(userdata)
     
             // Check the 'Balance' Cookie
             let balance = Number(getCookie('balance'))
