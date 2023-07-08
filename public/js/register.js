@@ -29,11 +29,6 @@ form.addEventListener("submit", async function(e){
             setCookie('inviterName', inviterName, 100)
             setCookie('inviterUniqueId', inviterUniqueId, 100)
 
-            // If 'Invitations' Array is not empty, set the 'inviteeOneName', 'inviteeTwoName' and their corresponding 'UniqueId' cookies
-            // console.log(invitations.length)
-            // invitations.forEach(invite => {
-            //     console.log
-            // });
             // Redirect to 'invite.html'
             window.location.href = 'invite.html'
 
